@@ -1,0 +1,24 @@
+// _    _             _                
+// | |  | |           | |               
+// | |  | | __ _ _   _| |__   __ _ _ __ 
+// | |/\| |/ _` | | | | '_ \ / _` | '__|
+// \  /\  / (_| | |_| | |_) | (_| | |   
+//  \/  \/ \__,_|\__, |_.__/ \__,_|_|   
+//                __/ |                 
+//               |___/                  
+//_____________________________________________
+
+{   
+    "include": ["~/.config/waybar/modules/modules.json"],                                                                              //Paths to additional configuration                                     
+
+    "position": "top",                                                                                                                 //Waybar position
+    "height": 40,                                                                                                                      //Defines the waybar height
+    "margin": "15px 15px 0 15px",                                                                                                      //Defines the margin around the waybar
+    "spacing": 20,                                                                                                                     //Defines the space between a module and another
+
+    
+    "modules-left": ["custom/arch", "hyprland/workspaces","pulseaudio","custom/cava",  "custom/spotify", "custom/youtube"],            //Defines the modules displayed on  left
+    "modules-center": ["cpu", "temperature","memory","custom/pacman-updates", "custom/github-notifications", "custom/github-commits"], //Defines the modules displayed on center  
+    "modules-right": ["clock", "custom/screenshot","custom/wallpaper", "custom/notification", "network", "custom/settings"]            // Defines the modules displayed on the right
+                                                                                                            
+}

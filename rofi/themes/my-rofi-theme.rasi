@@ -1,0 +1,22 @@
+@import "~/.config/rofi/themes/colors.rasi"
+
+
+
+* {
+    bg0:rgba(55, 56, 58, 0.6);
+    bg1:    #3B4252;
+    bg2:    #4C566A80;
+    bg3:    @secondary;
+    fg0:    #D8DEE9;
+    fg1:    #ECEFF4;
+    fg2:    #D8DEE9;
+    fg3:    #4C566A;
+}
+
+
+@import "~/.config/rofi/template/rounded-template.rasi"
+
+
+element selected {
+    text-color: @bg1;
+}

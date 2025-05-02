@@ -1,0 +1,33 @@
+/*
+#  ____        __ _  
+# |  _ \ ___  / _(_) 
+# | |_) / _ \| |_| | 
+# |  _ < (_) |  _| | 
+# |_| \_\___/|_| |_| 
+#                    
+# by Stephan Raabe (2023) 
+# ----------------------------------------------------- 
+*/
+
+/* ---- Configuration ---- */
+configuration {
+    modi:                       "drun,filebrowser,window,run";
+    font:                       "JetBrains Mono 12";
+    show-icons:                 true;
+    icon-theme:                 "kora";
+    display-drun:                " ";
+    display-run:                 " ";
+    display-filebrowser:         "  ";
+    display-window:              "  ";
+	drun-display-format:        "{name}";
+    hover-select:               false;
+    scroll-method:              1;
+    me-select-entry:            "";
+    me-accept-entry:            "MousePrimary";
+    window-format:              "{w} · {c} · {t}";
+    
+}
+
+
+/* ---- Load colors ---- */
+@theme "~/.config/rofi/themes/my-rofi-theme.rasi"

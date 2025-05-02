@@ -1,0 +1,349 @@
+@import "colors.css";
+
+@define-color blur_background @blur_background;
+@define-color border @on_secondary;
+
+* {
+    font-family: Iosevka Nerd Font, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+
+/* ---------------------------------------- */
+/* Waybar container                         */
+/* ---------------------------------------- */
+window#waybar {
+    /* background-color:rgba(17, 19, 24, 0.3);
+    border: 1px solid rgb(47, 53, 75); */
+    background-color: transparent;
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+    border-radius: 6px;
+    
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+    background-color: #000000;
+    border: none;
+}
+
+
+
+/* ---------------------------------------- */
+/* Arch Launcher                            */
+/* ---------------------------------------- */
+#custom-arch {
+    font-size: 20px;
+    margin-left: 10px;
+    color: #B3D1FF;
+
+}
+
+#custom-arch:hover{
+    animation: rainbow-color 3s linear infinite;
+}
+
+
+/* ---------------------------------------- */
+/* Workspaces                               */
+/* ---------------------------------------- */
+
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+
+#workspaces button.active{
+    color: #B3D1FF;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+button {
+    box-shadow: inset 0 -3px transparent;
+    border: none;
+    border-radius: 0;
+}
+
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px #B3D1FF;
+}
+
+/* ---------------------------------------- */
+/* CAVA                                     */
+/* ---------------------------------------- */
+#custom-cava {
+    color: #D1B3FF;
+    font-family: monospace;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+}
+
+
+/* ---------------------------------------- */
+/* SPOTIFY                                  */
+/* ---------------------------------------- */
+#custom-spotify{
+    color: #B3FFB3;
+}
+
+/* ---------------------------------------- */
+/* YOUTUBE                                  */
+/* ---------------------------------------- */
+#custom-youtube{
+    color: #FFB3B3;
+}
+
+
+
+/* ---------------------------------------- */
+/* PULSEAUDIO                               */
+/* ---------------------------------------- */
+#pulseaudio {
+    background-color: transparent;
+    color: #ffffff;
+}
+#pulseaudio:hover {
+    animation: rainbow-color 3s linear infinite;
+}
+
+
+/* ---------------------------------------- */
+/* CPU                                      */
+/* ---------------------------------------- */
+#cpu {
+    color: #ffffff;;
+}
+#cpu:hover {
+    animation: rainbow-color 3s linear infinite;
+}
+
+
+/* ---------------------------------------- */
+/* CPU TEMPERATURE                          */
+/* ---------------------------------------- */
+#temperature {
+    color: #ffffff;
+}
+
+#temperature:hover {
+    animation: rainbow-color 3s linear infinite;
+}
+
+/* ---------------------------------------- */
+/* MEMORY                                   */
+/* ---------------------------------------- */
+#memory {
+    color: #ffffff;
+}
+
+#memory:hover {
+    animation: rainbow-color 3s linear infinite;
+}
+
+
+
+
+/* ---------------------------------------- */
+/* PACMAN UPDATES                           */
+/* ---------------------------------------- */
+#custom-pacman-updates {
+    color: #ffffff;
+}
+
+#custom-pacman-updates:hover {
+    animation: rainbow-color 3s linear infinite;
+}
+
+
+/* ---------------------------------------- */
+/* GITHUB NOTIFICATIONS & COMMITS           */
+/* ---------------------------------------- */
+#custom-github-notifications {
+    color: #ffffff;
+}
+
+#custom-github-commits {
+    color: #B3FFB3;
+}
+
+#custom-github-commits:hover, #custom-github-notifications:hover{
+    animation: rainbow-color 3s linear infinite;
+}
+
+/* ---------------------------------------- */
+/* CLOCK                                    */
+/* ---------------------------------------- */
+#clock {
+    color: #ffffff;
+}
+
+#clock:hover {
+    animation: rainbow-color 3s linear infinite;
+}
+
+/* ---------------------------------------- */
+/* SCREENSHOT                               */
+/* ---------------------------------------- */
+/* ---------------------------------------- */
+#custom-screenshot {
+    color: #ffffff;
+}
+
+#custom-screenshot:hover {
+    animation: rainbow-color 3s linear infinite;
+}
+
+/* ---------------------------------------- */
+/* WALLPAPER                                */
+/* ---------------------------------------- */
+#custom-wallpaper {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+#custom-wallpaper:hover {
+    animation: rainbow-color 3s linear infinite;
+}
+
+
+/* ---------------------------------------- */
+/* NOTIFICATION                              */
+/* ---------------------------------------- */
+#custom-notification {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+#custom-notification:hover {
+    animation: rainbow-color 3s linear infinite;
+}
+
+
+/* ---------------------------------------- */
+/* ETHERNET/WIFI                            */
+/* ---------------------------------------- */
+#network {
+    color: #ffffff;
+    font-size: 20px;
+}
+#network.disconnected {
+    color: #ffffff;
+}
+
+#network:hover {
+    animation: rainbow-color 3s linear infinite;
+}
+
+
+/* ---------------------------------------- */
+/* SETTINGS                                 */
+/* ---------------------------------------- */
+#custom-settings {
+    color: #ffffff;
+    margin-right: 10px;
+}
+
+#custom-settings:hover {
+    animation: rainbow-color 3s linear infinite;
+}
+
+
+
+
+
+
+/* ---------------------------------------- */
+/* MODULES-LEFT                             */
+/* ---------------------------------------- */
+.modules-left {
+    background-color: rgba(17, 19, 24, 0.4);
+    /* border: 1px solid rgb(86, 92, 110); */
+    border: 1px solid @border;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 0 15px 0 0;
+    /* animation: rainbow-border 6s linear infinite; */
+}
+
+/* ---------------------------------------- */
+/* MODULES-CENTER                           */
+/* ---------------------------------------- */
+.modules-center{
+    background-color:rgba(17, 19, 24, 0.4);
+    /* border: 1px solid rgb(86, 92, 110); */
+    border: 1px solid @border;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 0 15px 0 15px;
+    /* animation: rainbow-border 6s linear infinite; */
+
+}
+
+
+/* ---------------------------------------- */
+/* MODULES-RIGHT                            */
+/* ---------------------------------------- */
+.modules-right {
+    background-color:rgba(17, 19, 24, 0.4);
+    /* border: 1px solid rgb(86, 92, 110); */
+    border: 1px solid @border;
+
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 0 0 0 15px;
+    /* animation: rainbow-border 6s linear infinite; */
+
+}
+
+
+/* ---------------------------------------- */
+/* ANIMATIONS                               */
+/* ---------------------------------------- */
+@keyframes rainbow-color {
+    0%   { color: #FFB3B3; }  /* light red */
+    14%  { color: #FFD1A3; }  /* light orange */
+    28%  { color: #FFFFB3; }  /* light yellow */
+    42%  { color: #B3FFB3; }  /* light green */
+    57%  { color: #B3D1FF; }  /* light blue */
+    71%  { color: #D1B3FF; }  /* light indigo */
+    85%  { color: #FFB3E6; }  /* light violet */
+    100% { color: #FFB3B3; }
+}
+
+@keyframes rainbow-border {
+    0%   { border-color: #FFB3B3; }
+    14%  { border-color: #FFD1A3; }
+    28%  { border-color: #FFFFB3; }
+    42%  { border-color: #B3FFB3; }
+    57%  { border-color: #B3D1FF; }
+    71%  { border-color: #D1B3FF; }
+    85%  { border-color: #FFB3E6; }
+    100% { border-color: #FFB3B3; }
+}
+
+
+
+
+
+
+

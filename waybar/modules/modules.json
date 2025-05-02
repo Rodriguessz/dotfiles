@@ -1,0 +1,185 @@
+{
+    
+    "hyprland/workspaces": {
+        "format-icons": {
+            "urgent": "",
+            "active": "",
+            "default": ""
+        },
+        "persistent-workspaces": {
+            "*": 5
+        }
+    },
+
+    "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": " {format_source}",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": " ",
+      "headset": " ",
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol",
+    "tooltip": false
+  },
+
+    "cpu": {
+        "interval": 10,
+        "format": "  {usage}%"
+    },
+
+    "temperature": {
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "format": " {temperatureC}°C",
+        "tooltip-format": "CPU: {temperatureC}°C"
+    },
+
+    "memory": {
+        "format": " {percentage}%",
+        "interval": "60",
+        "tooltip": true,
+        "tooltip-format": "{used}gb usados",
+        "on-click-right": "exec"
+    },
+
+    "network": {
+        "format-ethernet": "󰈁",
+        "format-disconnected": "󰈂",
+        "tooltip-format-ethernet": "Conectado",
+        "tooltip-format-disconnected": "Desconectado "
+                
+    },
+
+    "clock": {
+        "interval": 60,
+        "format": "  {:%H:%M}",
+        "tooltip":false,
+        "tooltip-format": "{tz_list}",
+        "max-length": 25
+    },
+
+    
+
+
+    
+    "custom/arch": {
+        "format": "  ",
+        "on-click": "~/.config/setup/settings/logout.sh",
+        "on-click-right": "hyprlock",
+        "tooltip-format": "Left: Power menu\nRight: Lock screen"
+    },
+
+    "custom/spotify": {
+        "format": " {}",
+        "max-length": 40,
+        "exec": "~/.config/waybar/scripts/py/spotify-player.py 2> /dev/null",
+        "return-type": "json",
+        "on-click": "playerctl -p spotify play-pause",
+        "on-click-right": "killall spotify",
+        "on-scroll-up" : "playerctl -p spotify next",
+        "on-scroll-down" : "playerctl -p spotify previous"
+    },
+
+    "custom/youtube": {
+        "format": " {}",
+        "max-length": 40,
+        "exec": "~/.config/waybar/scripts/py/youtube-player.py 2> /dev/null",
+        "return-type": "json",
+        "on-click": "playerctl -p firefox play-pause",
+        "on-scroll-up" : "playerctl -p firefox next",
+        "on-scroll-down" : "playerctl -p firefox previous"
+    },
+
+    "custom/cava": {
+        "exec": "~/.config/waybar/scripts/cava-waybar.sh",
+        "return-type": "text",
+        "interval": "0.5",
+        "format": "{}",
+        "format-foreground": "#8A2BE2",
+        "tail": true
+        
+    },
+    
+    "custom/pacman-updates": {
+        "exec": "~/.config/waybar/scripts/updates-pacman.sh",
+        "interval": 3600,
+        "return-type": "text",
+        "tooltip": true,
+        "tooltip-format": "{} pacotes para atualizar",
+        "on-click": "kitty -e bash -c 'sudo pacman -Syu; read -n 1 -s -r -p \"Pressione qualquer tecla para fechar...\"'"
+
+    },
+
+    "custom/github-notifications": {
+        "exec": "~/.config/waybar/scripts/github-notifications.sh",
+        "interval": "600",
+        "return-type": "text",
+        "tooltip": true,
+        "tooltip-format": "{} notificações",
+
+        "on-click": "~/.config/setup/settings/github-notifications.sh"
+    },
+
+    "custom/github-commits": {
+        "exec": "~/.config/waybar/scripts/github-commits.sh",
+        "interval": "36000r",
+        "return-type": "text",
+        "tooltip": true,
+        "tooltip-format": "{} commits no ano de 2025"
+    },
+
+    "custom/screenshot": {
+        "format": " ",
+        "tooltip": true,
+        "tooltip-format": "Left: Print por região \nRight: Print da tela inteira\nForward: Salvar captura com região\nBackward: Salvar carptura",
+        "on-click": "~/.config/waybar/scripts/screenshot.sh region",
+        "on-click-right": "~/.config/waybar/scripts/screenshot.sh full",
+        "on-click-forward": "~/.config/waybar/scripts/screenshot.sh region-save",
+        "on-click-backward": "~/.config/waybar/scripts/screenshot.sh save"
+    },  
+
+    "custom/wallpaper": {
+        "format": "󰸉 ",
+        "on-click": "bash -c waypaper &",
+        "on-click-right": "~/.config/hypr/scripts/wallpaper-effects.sh",
+        "tooltip-format": "Left: Wallpaper \nRight: Wallpaper effect"
+    },
+
+    "custom/notification": {
+        "tooltip-format": "Left: Notificações\nRight: Não perturbe",
+        "format": "{icon} ",
+        "format-icons": {
+          "notification":
+            "<span rise='8pt'><span foreground='red'><sup></sup></span></span>",
+          "none": "",
+          "dnd-notification":
+            "<span rise='8pt'><span foreground='red'><sup></sup></span></span>",
+          "dnd-none": "",
+          "inhibited-notification":
+            "<span rise='8pt'><span foreground='red'><sup></sup></span></span>",
+          "inhibited-none": "",
+          "dnd-inhibited-notification":
+            "<span rise='8pt'><span foreground='red'><sup></sup></span></span>",
+          "dnd-inhibited-none": ""
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+      },
+
+    "custom/settings": {
+        "format": " ",
+        "on-click": "exec code ~/.config ",
+        "tooltip-format": "Configurações"
+    }
+    
+    
+}
