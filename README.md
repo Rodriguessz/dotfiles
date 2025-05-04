@@ -11,8 +11,8 @@ My personal dotfiles for customizing my Wayland setup (Hyprland) on Arch Linux.
 ### Waybar
 ![waybar](assets/screenshot-2025-05-02_14-21-28.png)
 
-<!-- ### Wlogout
-![wlogout](assets/logout.png.png) -->
+### Wlogout
+![wlogout](assets/logout.png.png)
 
 
 ## Dependencies
